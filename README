@@ -1,0 +1,74 @@
+i3-grid - a gridded workspace manager for the i3 Window Manager
+Copyright (C) 2014 Luke Shimanuki
+Version 1.0
+
+INTRODUCTION
+
+  i3-grid is a python script that organizes i3 Window Manager workspaces into
+  a customizable grid. It can be run from the command line or bound to hotkeys
+  through the i3 configuration file. It is primarily developed for Linux, but
+  may support BSD or other Unix systems as well.
+
+DEPENDENCIES
+
+  Python 2 OR Python 3
+
+    i3-grid is written in python, and it supports both Python 2 and Python 3
+    syntax. The python interpreter must be linked to the python command.
+
+  i3 Window Manager
+
+    i3-grid accesses the i3 Window Manager through the i3-msg interface.
+
+INSTALLATION
+
+  Install with
+
+    sh ./install.sh
+
+  and uninstall with
+
+    sh ./uninstall.sh
+
+  Both of these require root privileges, and install.sh must be run from the
+  root directory of this repository. Note that i3-grid is generally installed
+  to /usr/bin/i3-grid, so installation will fail if that file already exists.
+
+  To use i3-grid with hotkeys, add the following to the i3 configuration file
+  for each hotkey:
+
+     bindsym <key> exec i3-grid <command>
+
+USAGE
+
+  i3-grid <command>
+
+  Usable Commands:
+  help      | prints help message
+  whereami  | prints the current workspace
+            |
+  up        | moves up
+  down      | moves down
+  left      | moves left
+  right     | moves right
+            |
+  sendUp    | sends window up
+  sendDown  | sends window down
+  sendRight | sends window right
+  sendLeft  | sends window left
+
+LICENSE
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
